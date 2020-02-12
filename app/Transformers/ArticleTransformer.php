@@ -11,6 +11,7 @@ class ArticleTransformer extends TransformerAbstract
     public function transform(Article $article)
     {
         return [
+            'id'          => $article->id,
             'user'        => $article->user_id,
             'content'     => $article->content,
             'published'   => $article->created_at->diffForHumans(),
